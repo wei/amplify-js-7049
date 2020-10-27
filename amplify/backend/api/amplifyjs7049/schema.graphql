@@ -1,0 +1,15 @@
+type User
+  @model {
+  id: ID!
+  username: String!
+  email: String!
+  rentalUnits: [RentalUnit] @connection(keyName: "OwnerUnits", fields: ["id"])
+}
+
+type RentalUnit
+  @model
+  @key(name: "OwnerUnits", fields: ["ownerID"]) {
+  id: ID!
+  ownerID: ID!
+  unitType: String!
+}
