@@ -24,6 +24,11 @@
   color: white;
 }
 
+.App-header section {
+  display: flex;
+  justify-content: space-between;
+}
+
 .App-link {
   color: #61dafb;
 }
